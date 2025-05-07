@@ -1,0 +1,14 @@
+body {
+  background-color: #f8f9fa;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+#feedback {
+  background: #fff3cd;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ffeeba;
+}

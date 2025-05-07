@@ -1,0 +1,8 @@
+flask
+python-docx
+pdfplumber
+pandas
+numpy
+faster_whisper
+google-generativeai
+soundfile
