@@ -259,3 +259,183 @@ soundfile.LibsndfileError: Error opening 'uploads\\recording.wav': Format not re
 INFO:werkzeug:127.0.0.1 - - [07/May/2025 10:57:48] "[35m[1mPOST /transcribe HTTP/1.1[0m" 500 -
 INFO:werkzeug:127.0.0.1 - - [07/May/2025 10:57:51] "POST /ask HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [07/May/2025 10:57:59] "POST /ask HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.129.11:8080
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [07/May/2025 11:44:45] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/May/2025 11:44:45] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/May/2025 11:44:46] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+WARNING:pdfminer.pdfpage:CropBox missing from /Page, defaulting to MediaBox
+WARNING:pdfminer.pdfpage:CropBox missing from /Page, defaulting to MediaBox
+WARNING:pdfminer.pdfpage:CropBox missing from /Page, defaulting to MediaBox
+WARNING:pdfminer.pdfpage:CropBox missing from /Page, defaulting to MediaBox
+INFO:werkzeug:127.0.0.1 - - [07/May/2025 11:45:18] "POST /upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/May/2025 11:45:20] "POST /ask HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.129.11:8080
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [07/May/2025 11:57:34] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/May/2025 11:57:34] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/May/2025 11:57:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+WARNING:pdfminer.pdfpage:CropBox missing from /Page, defaulting to MediaBox
+WARNING:pdfminer.pdfpage:CropBox missing from /Page, defaulting to MediaBox
+WARNING:pdfminer.pdfpage:CropBox missing from /Page, defaulting to MediaBox
+WARNING:pdfminer.pdfpage:CropBox missing from /Page, defaulting to MediaBox
+WARNING:pdfminer.pdfpage:CropBox missing from /Page, defaulting to MediaBox
+WARNING:pdfminer.pdfpage:CropBox missing from /Page, defaulting to MediaBox
+INFO:werkzeug:127.0.0.1 - - [07/May/2025 11:57:56] "POST /upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/May/2025 11:57:59] "POST /ask HTTP/1.1" 200 -
+ERROR:app:Exception on /transcribe [POST]
+Traceback (most recent call last):
+  File "C:\Users\Vamshi\Desktop\Proctoring\ai_interviewer_flask\venv\lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Vamshi\Desktop\Proctoring\ai_interviewer_flask\venv\lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Vamshi\Desktop\Proctoring\ai_interviewer_flask\venv\lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Vamshi\Desktop\Proctoring\ai_interviewer_flask\venv\lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Vamshi\Desktop\Proctoring\ai_interviewer_flask\app.py", line 86, in transcribe
+    text = transcribe_audio(filepath)
+  File "C:\Users\Vamshi\Desktop\Proctoring\ai_interviewer_flask\app.py", line 33, in transcribe_audio
+    audio_data, sample_rate = sf.read(audio_path)
+  File "C:\Users\Vamshi\Desktop\Proctoring\ai_interviewer_flask\venv\lib\site-packages\soundfile.py", line 305, in read
+    with SoundFile(file, 'r', samplerate, channels,
+  File "C:\Users\Vamshi\Desktop\Proctoring\ai_interviewer_flask\venv\lib\site-packages\soundfile.py", line 690, in __init__
+    self._file = self._open(file, mode_int, closefd)
+  File "C:\Users\Vamshi\Desktop\Proctoring\ai_interviewer_flask\venv\lib\site-packages\soundfile.py", line 1265, in _open
+    raise LibsndfileError(err, prefix="Error opening {0!r}: ".format(self.name))
+soundfile.LibsndfileError: Error opening 'uploads\\recording.wav': Format not recognised.
+INFO:werkzeug:127.0.0.1 - - [07/May/2025 11:58:54] "[35m[1mPOST /transcribe HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [07/May/2025 11:58:58] "POST /ask HTTP/1.1" 200 -
+ERROR:app:Exception on /transcribe [POST]
+Traceback (most recent call last):
+  File "C:\Users\Vamshi\Desktop\Proctoring\ai_interviewer_flask\venv\lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Vamshi\Desktop\Proctoring\ai_interviewer_flask\venv\lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Vamshi\Desktop\Proctoring\ai_interviewer_flask\venv\lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Vamshi\Desktop\Proctoring\ai_interviewer_flask\venv\lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Vamshi\Desktop\Proctoring\ai_interviewer_flask\app.py", line 86, in transcribe
+    text = transcribe_audio(filepath)
+  File "C:\Users\Vamshi\Desktop\Proctoring\ai_interviewer_flask\app.py", line 33, in transcribe_audio
+    audio_data, sample_rate = sf.read(audio_path)
+  File "C:\Users\Vamshi\Desktop\Proctoring\ai_interviewer_flask\venv\lib\site-packages\soundfile.py", line 305, in read
+    with SoundFile(file, 'r', samplerate, channels,
+  File "C:\Users\Vamshi\Desktop\Proctoring\ai_interviewer_flask\venv\lib\site-packages\soundfile.py", line 690, in __init__
+    self._file = self._open(file, mode_int, closefd)
+  File "C:\Users\Vamshi\Desktop\Proctoring\ai_interviewer_flask\venv\lib\site-packages\soundfile.py", line 1265, in _open
+    raise LibsndfileError(err, prefix="Error opening {0!r}: ".format(self.name))
+soundfile.LibsndfileError: Error opening 'uploads\\recording.wav': Format not recognised.
+INFO:werkzeug:127.0.0.1 - - [07/May/2025 11:59:58] "[35m[1mPOST /transcribe HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [07/May/2025 12:00:01] "POST /ask HTTP/1.1" 200 -
+ERROR:app:Exception on /transcribe [POST]
+Traceback (most recent call last):
+  File "C:\Users\Vamshi\Desktop\Proctoring\ai_interviewer_flask\venv\lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Vamshi\Desktop\Proctoring\ai_interviewer_flask\venv\lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Vamshi\Desktop\Proctoring\ai_interviewer_flask\venv\lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Vamshi\Desktop\Proctoring\ai_interviewer_flask\venv\lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Vamshi\Desktop\Proctoring\ai_interviewer_flask\app.py", line 86, in transcribe
+    text = transcribe_audio(filepath)
+  File "C:\Users\Vamshi\Desktop\Proctoring\ai_interviewer_flask\app.py", line 33, in transcribe_audio
+    audio_data, sample_rate = sf.read(audio_path)
+  File "C:\Users\Vamshi\Desktop\Proctoring\ai_interviewer_flask\venv\lib\site-packages\soundfile.py", line 305, in read
+    with SoundFile(file, 'r', samplerate, channels,
+  File "C:\Users\Vamshi\Desktop\Proctoring\ai_interviewer_flask\venv\lib\site-packages\soundfile.py", line 690, in __init__
+    self._file = self._open(file, mode_int, closefd)
+  File "C:\Users\Vamshi\Desktop\Proctoring\ai_interviewer_flask\venv\lib\site-packages\soundfile.py", line 1265, in _open
+    raise LibsndfileError(err, prefix="Error opening {0!r}: ".format(self.name))
+soundfile.LibsndfileError: Error opening 'uploads\\recording.wav': Format not recognised.
+INFO:werkzeug:127.0.0.1 - - [07/May/2025 12:00:57] "[35m[1mPOST /transcribe HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [07/May/2025 12:01:05] "POST /feedback HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.200.5:8080
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [07/May/2025 15:36:09] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/May/2025 15:36:10] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/May/2025 15:36:10] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+WARNING:pdfminer.pdfpage:CropBox missing from /Page, defaulting to MediaBox
+WARNING:pdfminer.pdfpage:CropBox missing from /Page, defaulting to MediaBox
+INFO:werkzeug:127.0.0.1 - - [07/May/2025 15:36:37] "POST /upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/May/2025 15:36:39] "POST /ask HTTP/1.1" 200 -
+ERROR:app:Exception on /transcribe [POST]
+Traceback (most recent call last):
+  File "C:\Users\Vamshi\Desktop\Proctoring\ai_interviewer_flask\venv\lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Vamshi\Desktop\Proctoring\ai_interviewer_flask\venv\lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Vamshi\Desktop\Proctoring\ai_interviewer_flask\venv\lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Vamshi\Desktop\Proctoring\ai_interviewer_flask\venv\lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Vamshi\Desktop\Proctoring\ai_interviewer_flask\app.py", line 86, in transcribe
+    text = transcribe_audio(filepath)
+  File "C:\Users\Vamshi\Desktop\Proctoring\ai_interviewer_flask\app.py", line 33, in transcribe_audio
+    audio_data, sample_rate = sf.read(audio_path)
+  File "C:\Users\Vamshi\Desktop\Proctoring\ai_interviewer_flask\venv\lib\site-packages\soundfile.py", line 305, in read
+    with SoundFile(file, 'r', samplerate, channels,
+  File "C:\Users\Vamshi\Desktop\Proctoring\ai_interviewer_flask\venv\lib\site-packages\soundfile.py", line 690, in __init__
+    self._file = self._open(file, mode_int, closefd)
+  File "C:\Users\Vamshi\Desktop\Proctoring\ai_interviewer_flask\venv\lib\site-packages\soundfile.py", line 1265, in _open
+    raise LibsndfileError(err, prefix="Error opening {0!r}: ".format(self.name))
+soundfile.LibsndfileError: Error opening 'uploads\\recording.wav': Format not recognised.
+INFO:werkzeug:127.0.0.1 - - [07/May/2025 15:38:23] "[35m[1mPOST /transcribe HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [07/May/2025 15:38:50] "POST /ask HTTP/1.1" 200 -
+ERROR:app:Exception on /transcribe [POST]
+Traceback (most recent call last):
+  File "C:\Users\Vamshi\Desktop\Proctoring\ai_interviewer_flask\venv\lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Vamshi\Desktop\Proctoring\ai_interviewer_flask\venv\lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Vamshi\Desktop\Proctoring\ai_interviewer_flask\venv\lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Vamshi\Desktop\Proctoring\ai_interviewer_flask\venv\lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Vamshi\Desktop\Proctoring\ai_interviewer_flask\app.py", line 86, in transcribe
+    text = transcribe_audio(filepath)
+  File "C:\Users\Vamshi\Desktop\Proctoring\ai_interviewer_flask\app.py", line 33, in transcribe_audio
+    audio_data, sample_rate = sf.read(audio_path)
+  File "C:\Users\Vamshi\Desktop\Proctoring\ai_interviewer_flask\venv\lib\site-packages\soundfile.py", line 305, in read
+    with SoundFile(file, 'r', samplerate, channels,
+  File "C:\Users\Vamshi\Desktop\Proctoring\ai_interviewer_flask\venv\lib\site-packages\soundfile.py", line 690, in __init__
+    self._file = self._open(file, mode_int, closefd)
+  File "C:\Users\Vamshi\Desktop\Proctoring\ai_interviewer_flask\venv\lib\site-packages\soundfile.py", line 1265, in _open
+    raise LibsndfileError(err, prefix="Error opening {0!r}: ".format(self.name))
+soundfile.LibsndfileError: Error opening 'uploads\\recording.wav': Format not recognised.
+INFO:werkzeug:127.0.0.1 - - [07/May/2025 15:41:36] "[35m[1mPOST /transcribe HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [07/May/2025 15:41:40] "POST /ask HTTP/1.1" 200 -
+ERROR:app:Exception on /transcribe [POST]
+Traceback (most recent call last):
+  File "C:\Users\Vamshi\Desktop\Proctoring\ai_interviewer_flask\venv\lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Vamshi\Desktop\Proctoring\ai_interviewer_flask\venv\lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Vamshi\Desktop\Proctoring\ai_interviewer_flask\venv\lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Vamshi\Desktop\Proctoring\ai_interviewer_flask\venv\lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Vamshi\Desktop\Proctoring\ai_interviewer_flask\app.py", line 86, in transcribe
+    text = transcribe_audio(filepath)
+  File "C:\Users\Vamshi\Desktop\Proctoring\ai_interviewer_flask\app.py", line 33, in transcribe_audio
+    audio_data, sample_rate = sf.read(audio_path)
+  File "C:\Users\Vamshi\Desktop\Proctoring\ai_interviewer_flask\venv\lib\site-packages\soundfile.py", line 305, in read
+    with SoundFile(file, 'r', samplerate, channels,
+  File "C:\Users\Vamshi\Desktop\Proctoring\ai_interviewer_flask\venv\lib\site-packages\soundfile.py", line 690, in __init__
+    self._file = self._open(file, mode_int, closefd)
+  File "C:\Users\Vamshi\Desktop\Proctoring\ai_interviewer_flask\venv\lib\site-packages\soundfile.py", line 1265, in _open
+    raise LibsndfileError(err, prefix="Error opening {0!r}: ".format(self.name))
+soundfile.LibsndfileError: Error opening 'uploads\\recording.wav': Format not recognised.
+INFO:werkzeug:127.0.0.1 - - [07/May/2025 15:42:30] "[35m[1mPOST /transcribe HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [07/May/2025 15:42:40] "POST /feedback HTTP/1.1" 200 -

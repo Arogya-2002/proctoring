@@ -36,7 +36,7 @@ def transcribe_audio(audio_path):
 
 def generate_question(resume_text, previous_answer=None):
     prompt = (
-        f"Generate an interview question based on this resume:\n{resume_text}" if not previous_answer
+        f"Generate one interview question at a time  based on this resume:\n{resume_text}" if not previous_answer
         else f"Ask a follow-up technical question based on this resume and previous answer.\nResume:\n{resume_text}\nAnswer:\n{previous_answer}"
     )
     try:
